@@ -11,7 +11,7 @@ body { font-family: 'Host Grotesk', sans-serif; background-color: #FFEFCA; color
 .social-icon:hover { transform: scale(1.1); }
 .instagram-icon { background-color: #FF69B4; }
 .linkedin-icon { background-color: #87CEEB; }
-.main-content { padding: 60px 0; background-color: white; min-height: calc(100vh - 300px); }
+.main-content { padding: 60px 0; background-color: #FFEFCA; min-height: calc(100vh - 300px); }
 .about-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
 .photo-placeholder { width: 100%; aspect-ratio: 1; background-color: #D3D3D3; border-radius: 4px; }
 .about-text { display: flex; flex-direction: column; gap: 20px; font-size: 16px; line-height: 1.6; }
