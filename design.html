@@ -3,41 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Projects</title>
+    <title>Design - Lancey Yin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Host+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body { font-family: Arial, sans-serif; }
-        .project { display: flex; margin-bottom: 20px; }
-        .project img { max-width: 100%; height: auto; }
-        .project-content { padding: 10px; }
-        .right { flex-direction: row-reverse; }
+        .portfolio-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .portfolio-item:nth-child(even) {
+            direction: rtl;
+        }
+
+        .portfolio-item:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .portfolio-text h2 {
+            font-family: 'Do Hyeon', sans-serif;
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-text p {
+            font-family: 'Host Grotesk', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-item {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-item:nth-child(even) {
+                direction: ltr;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>My Portfolio Projects</h1>
-
-    <div class="project">
-        <img src="Zoo thumbnail.jpg" alt="Zoo Signage">
-        <div class="project-content">
-            <h2>Zoo Signage</h2>
-            <p>Description of the Zoo Signage project.</p>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">LY</a>
+            <nav class="nav">
+                <a href="illustration.html">Illustration</a>
+                <a href="design.html">Design</a>
+                <a href="https://www.instagram.com/giraffemandraws/" class="social-icon instagram-icon"></a>
+                <a href="https://www.linkedin.com/in/lancey-yin/" class="social-icon linkedin-icon"></a>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <div class="project right">
-        <img src="01-CritterCrate Render.jpg" alt="Critter Crate">
-        <div class="project-content">
-            <h2>Critter Crate</h2>
-            <p>Description of the Critter Crate project.</p>
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Zoo Signage Project -->
+            <div class="portfolio-item">
+                <img src="Design projects/01 Toronto Zoo Signage/Zoo thumbnail.jpg" alt="Zoo Signage" class="portfolio-image">
+                <div class="portfolio-text">
+                    <h2>Zoo Signage</h2>
+                    <p>Combining my love of animals and graphic design, this project explores how signage can be more playful and unique if it breaks away from its conventional rectangular borders. By incorporating the animals into the signage, I can showcase the incredible diversity of wildlife found within the zoo. Their wide range of shapes and colours also brings liveliness to the zoo's atmosphere and makes them more engaging for visitors of all ages.</p>
+                </div>
+            </div>
+
+            <!-- Critter Crate Project -->
+            <div class="portfolio-item">
+                <img src="Design projects/02 Critter Crate/01-CritterCrate Render.jpg" alt="Critter Crate" class="portfolio-image">
+                <div class="portfolio-text">
+                    <h2>Critter Crate</h2>
+                    <p>Critter Crate is a hypothetical subscription box service focusing on animal conservation. Featuring the African painted dog, California condor, and great hammerhead shark, I created custom illustrated packaging, along with an accompanying info graphic and t-shirt design for each animal's box. These items were chosen to explore the balance between aesthetics and functionality in design.</p>
+                </div>
+            </div>
+
+            <!-- Basilisk Wine Project -->
+            <div class="portfolio-item">
+                <img src="Design projects/03 Basilisk/Basilisk-Render.jpg" alt="Basilisk Wine" class="portfolio-image">
+                <div class="portfolio-text">
+                    <h2>Basilisk Wine</h2>
+                    <p>Basilisk is my reimagining of the traditional practice of snake wine. Instead of fermenting a real snake inside the bottle, it is illustrated on the packaging to negate ethical concerns while maintaining the drink's fierce imagery. Featuring three snakes— an elapid snake, a cobra, and habu snake, each has their own unique scale patterning created traditionally with ink and a brush pen.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
 
-    <div class="project">
-        <img src="Basilisk-Render.jpg" alt="Basilisk Wine">
-        <div class="project-content">
-            <h2>Basilisk Wine</h2>
-            <p>Description of the Basilisk Wine project.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="https://www.instagram.com/giraffemandraws/" class="social-icon instagram-icon"></a>
+                <a href="https://www.linkedin.com/in/lancey-yin/" class="social-icon linkedin-icon"></a>
+                <span class="footer-email">lancey.yin@gmail.com</span>
+            </div>
         </div>
-    </div>
-
+    </footer>
 </body>
 </html>
