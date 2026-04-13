@@ -13,6 +13,7 @@
             gap: 40px;
             align-items: center;
             margin-bottom: 80px;
+            cursor: pointer;
         }
 
         .portfolio-image {
@@ -35,8 +36,118 @@
             color: #333;
         }
 
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .modal-content {
+            background-color: #FFEFCA;
+            width: 100%;
+            padding: 40px 20px;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .close-btn {
+            font-family: 'Do Hyeon', sans-serif;
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #333;
+        }
+
+        .modal-title {
+            font-family: 'Do Hyeon', sans-serif;
+            font-size: 32px;
+            color: #333;
+        }
+
+        .modal-description {
+            font-family: 'Host Grotesk', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 40px;
+            max-width: 1200px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+            max-width: 1200px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: auto;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .close-btn-footer {
+            font-family: 'Do Hyeon', sans-serif;
+            font-size: 18px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #333;
+        }
+
         @media (max-width: 768px) {
             .portfolio-item {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -60,7 +171,7 @@
     <main class="main-content">
         <div class="container">
             <!-- Zoo Signage Project -->
-            <div class="portfolio-item">
+            <div class="portfolio-item" onclick="openModal('zoo')">
                 <img src="Design projects/01 Toronto Zoo Signage/Zoo thumbnail.jpg" alt="Zoo Signage" class="portfolio-image">
                 <div class="portfolio-text">
                     <h2>Zoo Signage</h2>
@@ -69,7 +180,7 @@
             </div>
 
             <!-- Critter Crate Project -->
-            <div class="portfolio-item">
+            <div class="portfolio-item" onclick="openModal('critter')">
                 <img src="Design projects/02 Critter Crate/01-CritterCrate Render.jpg" alt="Critter Crate" class="portfolio-image">
                 <div class="portfolio-text">
                     <h2>Critter Crate</h2>
@@ -78,7 +189,7 @@
             </div>
 
             <!-- Basilisk Wine Project -->
-            <div class="portfolio-item">
+            <div class="portfolio-item" onclick="openModal('basilisk')">
                 <img src="Design projects/03 Basilisk/Basilisk-Render.jpg" alt="Basilisk Wine" class="portfolio-image">
                 <div class="portfolio-text">
                     <h2>Basilisk Wine</h2>
@@ -88,7 +199,86 @@
         </div>
     </main>
 
-        <!-- Footer -->
+    <!-- Zoo Signage Modal -->
+    <div id="zooModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-btn" onclick="closeModal('zoo')">✕ Close</button>
+                <h2 class="modal-title">Zoo Signage</h2>
+                <div></div>
+            </div>
+            <div class="modal-description">
+                <p>Combining my love of animals and graphic design, this project explores how signage can be more playful and unique if it breaks away from its conventional rectangular borders. By incorporating the animals into the signage, I can showcase the incredible diversity of wildlife found within the zoo. Their wide range of shapes and colours also brings liveliness to the zoo's atmosphere and makes them more engaging for visitors of all ages.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="Design projects/01 Toronto Zoo Signage/zoo signpost.png" alt="Zoo Signpost"></div>
+                <div class="gallery-item"><img src="Design projects/01 Toronto Zoo Signage/Africa.png" alt="Africa"></div>
+                <div class="gallery-item"><img src="Design projects/01 Toronto Zoo Signage/Australasia.png" alt="Australasia"></div>
+                <div class="gallery-item"><img src="Design projects/01 Toronto Zoo Signage/Americas.png" alt="Americas"></div>
+                <div class="gallery-item"><img src="Design projects/01 Toronto Zoo Signage/CanadianDomain.png" alt="Canadian Domain"></div>
+                <div class="gallery-item"><img src="Design projects/01 Toronto Zoo Signage/EurasiaWilds.png" alt="Eurasia Wilds"></div>
+                <div class="gallery-item"><img src="Design projects/01 Toronto Zoo Signage/Indomalaya.png" alt="Indomalaya"></div>
+                <div class="gallery-item"><img src="Design projects/01 Toronto Zoo Signage/TundraTrek.png" alt="Tundra Trek"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="close-btn-footer" onclick="closeModal('zoo')">✕ Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Critter Crate Modal -->
+    <div id="critterModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-btn" onclick="closeModal('critter')">✕ Close</button>
+                <h2 class="modal-title">Critter Crate</h2>
+                <div></div>
+            </div>
+            <div class="modal-description">
+                <p>Critter Crate is a hypothetical subscription box service focusing on animal conservation. Featuring the African painted dog, California condor, and great hammerhead shark, I created custom illustrated packaging, along with an accompanying info graphic and t-shirt design for each animal's box. These items were chosen to explore the balance between aesthetics and functionality in design.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="Design projects/02 Critter Crate/01-CritterCrate Render.jpg" alt="Critter Crate Render"></div>
+                <div class="gallery-item"><img src="Design projects/02 Critter Crate/Condor-Box.jpg" alt="Condor Box"></div>
+                <div class="gallery-item"><img src="Design projects/02 Critter Crate/Dog-Box.jpg" alt="Dog Box"></div>
+                <div class="gallery-item"><img src="Design projects/02 Critter Crate/Shark-Box.jpg" alt="Shark Box"></div>
+                <div class="gallery-item"><img src="Design projects/02 Critter Crate/Condor-Info.jpg" alt="Condor Info"></div>
+                <div class="gallery-item"><img src="Design projects/02 Critter Crate/Dog-Info.jpg" alt="Dog Info"></div>
+                <div class="gallery-item"><img src="Design projects/02 Critter Crate/Shark-Info.jpg" alt="Shark Info"></div>
+                <div class="gallery-item"><img src="Design projects/02 Critter Crate/Condor-Shirt.jpg" alt="Condor Shirt"></div>
+                <div class="gallery-item"><img src="Design projects/02 Critter Crate/Dog-Shirt.jpg" alt="Dog Shirt"></div>
+                <div class="gallery-item"><img src="Design projects/02 Critter Crate/Shark-Shirt.jpg" alt="Shark Shirt"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="close-btn-footer" onclick="closeModal('critter')">✕ Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Basilisk Wine Modal -->
+    <div id="basiliskModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-btn" onclick="closeModal('basilisk')">✕ Close</button>
+                <h2 class="modal-title">Basilisk Wine</h2>
+                <div></div>
+            </div>
+            <div class="modal-description">
+                <p>Basilisk is my reimagining of the traditional practice of snake wine. Instead of fermenting a real snake inside the bottle, it is illustrated on the packaging to negate ethical concerns while maintaining the drink's fierce imagery. Featuring three snakes— an elapid snake, a cobra, and habu snake, each has their own unique scale patterning created traditionally with ink and a brush pen.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="Design projects/03 Basilisk/Basilisk-Render.jpg" alt="Basilisk Render"></div>
+                <div class="gallery-item"><img src="Design projects/03 Basilisk/Label-Cobra.jpg" alt="Cobra Label"></div>
+                <div class="gallery-item"><img src="Design projects/03 Basilisk/Label-Habu.jpg" alt="Habu Label"></div>
+                <div class="gallery-item"><img src="Design projects/03 Basilisk/Label-Rattlesnake.jpg" alt="Rattlesnake Label"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="close-btn-footer" onclick="closeModal('basilisk')">✕ Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <img src="assets/footer image.png" alt="Footer decoration" class="footer-decoration">
     <footer class="footer">
         <div class="container">
@@ -99,4 +289,40 @@
             </div>
         </div>
     </footer>
-    
+
+    <script>
+        function openModal(project) {
+            const modals = {
+                'zoo': 'zooModal',
+                'critter': 'critterModal',
+                'basilisk': 'basiliskModal'
+            };
+            const modal = document.getElementById(modals[project]);
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(project) {
+            const modals = {
+                'zoo': 'zooModal',
+                'critter': 'critterModal',
+                'basilisk': 'basiliskModal'
+            };
+            const modal = document.getElementById(modals[project]);
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
