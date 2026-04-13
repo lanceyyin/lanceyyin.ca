@@ -15,14 +15,6 @@
             margin-bottom: 80px;
         }
 
-        .portfolio-item:nth-child(even) {
-            direction: rtl;
-        }
-
-        .portfolio-item:nth-child(even) > * {
-            direction: ltr;
-        }
-
         .portfolio-image {
             width: 100%;
             height: auto;
@@ -46,10 +38,6 @@
         @media (max-width: 768px) {
             .portfolio-item {
                 grid-template-columns: 1fr;
-            }
-
-            .portfolio-item:nth-child(even) {
-                direction: ltr;
             }
         }
     </style>
