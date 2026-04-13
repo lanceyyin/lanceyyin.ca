@@ -15,8 +15,8 @@ body { font-family: 'Host Grotesk', sans-serif; background-color: #FFEFCA; color
 .about-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
 .bio-image { width: 100%; height: auto; border-radius: 4px; }
 .about-text { display: flex; flex-direction: column; gap: 20px; font-size: 16px; line-height: 1.6; }
-.footer-decoration { width: 100%; height: auto; display: block; margin-bottom: -5px; }
-.footer { background-color: #4C630A; padding: 30px 0; margin-top: 60px; position: relative; }
+.footer-decoration { width: 100%; height: auto; display: block; margin-top: 60px; margin-bottom: -5px; }
+.footer { background-color: #4C630A; padding: 30px 0; margin-top: 0px; position: relative; }
 .footer .container { display: flex; justify-content: center; align-items: center; }
 .footer-content { display: flex; gap: 30px; align-items: center; }
 .footer-email { font-family: 'Host Grotesk', sans-serif; color: white; font-size: 16px; }
