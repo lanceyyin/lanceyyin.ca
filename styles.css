@@ -53,7 +53,7 @@ body { font-family: 'Host Grotesk', sans-serif; background-color: #FFEFCA; color
 .narrative-thumb { width: 45%; height: 300px; object-fit: cover; border-radius: 4px; cursor: pointer; transition: opacity 0.2s; }
 .narrative-thumb:hover { opacity: 0.85; }
 .personal-grid { columns: 3; column-gap: 10px; }
-.personal-img { width: 100%; height: auto; border-radius: 4px; cursor: pointer; transition: opacity 0.2s; display: block; margin-bottom: 10px; break-inside: avoid; }
+.personal-img { width: auto; height: 100%; border-radius: 4px; cursor: pointer; transition: opacity 0.2s; display: block; margin-bottom: 10px; break-inside: avoid; }
 .personal-img:hover { opacity: 0.85; }
 
 /* Lightbox */
