@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illustration - Lancey Yin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Host+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">LY</a>
+            <nav class="nav">
+                <a href="illustration.html">Illustration</a>
+                <a href="design.html">Design</a>
+                <a href="https://www.instagram.com/giraffemandraws/" class="social-icon instagram-icon"></a>
+                <a href="https://www.linkedin.com/in/lancey-yin/" class="social-icon linkedin-icon"></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+
+            <!-- Narrative Projects Section -->
+            <h2 class="section-title">Narrative Projects</h2>
+            <div class="illus-grid narrative-grid">
+                <img src="Illustrations/Celephais/Celephais_7-FINAL.jpg" alt="Celephais" class="narrative-thumb" onclick="openModal('celephais')">
+                <img src="Illustrations/DorianGray/DorianGray Colour.jpg" alt="Dorian Gray" class="narrative-thumb" onclick="openModal('doriangray')">
+            </div>
+
+            <!-- Personal Works Section -->
+            <h2 class="section-title">Personal Works</h2>
+            <div class="illus-grid personal-grid">
+                <img src="Illustrations/Hero.jpg"              alt="Hero"             class="personal-img" onclick="openLightbox(this)">
+                <img src="Illustrations/Stork.jpg"             alt="Stork"            class="personal-img" onclick="openLightbox(this)">
+                <img src="Illustrations/EagleAndSerpant.jpg"   alt="Eagle and Serpent" class="personal-img" onclick="openLightbox(this)">
+                <img src="Illustrations/flowers.jpg"           alt="Flowers"          class="personal-img" onclick="openLightbox(this)">
+                <img src="Illustrations/WingedSerpant.jpg"     alt="Winged Serpent"   class="personal-img" onclick="openLightbox(this)">
+                <img src="Illustrations/FlyingWyrm.jpg"        alt="Flying Wyrm"      class="personal-img" onclick="openLightbox(this)">
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Celephais Modal -->
+    <div id="celephaisModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-btn" onclick="closeModal('celephais')">✕ Close</button>
+                <h2 class="modal-title">Celephais</h2>
+            </div>
+            <div class="modal-description">
+                <p>Description for Celephais goes here.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="Illustrations/Celephais/Celephais_1-FINAL.jpg"  alt="Celephais 1"></div>
+                <div class="gallery-item"><img src="Illustrations/Celephais/Celephais_2-FINAL.jpg"  alt="Celephais 2"></div>
+                <div class="gallery-item"><img src="Illustrations/Celephais/Celephais_3-FINAL.jpg"  alt="Celephais 3"></div>
+                <div class="gallery-item"><img src="Illustrations/Celephais/Celephais_4-FINAL.jpg"  alt="Celephais 4"></div>
+                <div class="gallery-item"><img src="Illustrations/Celephais/Celephais_5-FINAL.jpg"  alt="Celephais 5"></div>
+                <div class="gallery-item"><img src="Illustrations/Celephais/Celephais_6-FINAL.jpg"  alt="Celephais 6"></div>
+                <div class="gallery-item"><img src="Illustrations/Celephais/Celephais_7-FINAL.jpg"  alt="Celephais 7"></div>
+                <div class="gallery-item"><img src="Illustrations/Celephais/Celephais_8-FINAL.jpg"  alt="Celephais 8"></div>
+                <div class="gallery-item"><img src="Illustrations/Celephais/Celephais_9-FINAL.jpg"  alt="Celephais 9"></div>
+                <div class="gallery-item"><img src="Illustrations/Celephais/Celephais_10-FINAL.jpg" alt="Celephais 10"></div>
+                <div class="gallery-item"><img src="Illustrations/Celephais/Celephais_11-FINAL.jpg" alt="Celephais 11"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="close-btn-footer" onclick="closeModal('celephais')">✕ Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dorian Gray Modal -->
+    <div id="doriangrayModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-btn" onclick="closeModal('doriangray')">✕ Close</button>
+                <h2 class="modal-title">Dorian Gray</h2>
+            </div>
+            <div class="modal-description">
+                <p>Description for Dorian Gray goes here.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="Illustrations/DorianGray/DorianGray BW.jpg"     alt="Dorian Gray BW"></div>
+                <div class="gallery-item"><img src="Illustrations/DorianGray/DorianGray Colour.jpg" alt="Dorian Gray Colour"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="close-btn-footer" onclick="closeModal('doriangray')">✕ Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+        <img id="lightbox-img" src="" alt="Enlarged view">
+    </div>
+
+    <!-- Footer -->
+    <img src="assets/footer image.png" alt="Footer decoration" class="footer-decoration">
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="https://www.instagram.com/giraffemandraws/" class="social-icon instagram-icon"></a>
+                <a href="https://www.linkedin.com/in/lancey-yin/" class="social-icon linkedin-icon"></a>
+                <span class="footer-email">lancey.yin@gmail.com</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(project) {
+            const modal = document.getElementById(project + 'Modal');
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(project) {
+            const modal = document.getElementById(project + 'Modal');
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.addEventListener('click', function(event) {
+            document.querySelectorAll('.modal').forEach(modal => {
+                if (event.target === modal) {
+                    modal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        function openLightbox(imgEl) {
+            document.getElementById('lightbox-img').src = imgEl.src;
+            document.getElementById('lightbox').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('lightbox-img').addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+    </script>
+</body>
+</html>
