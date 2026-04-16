@@ -9,8 +9,8 @@ body { font-family: 'Host Grotesk', sans-serif; background-color: #FFEFCA; color
 .nav a:not(.social-icon):hover { opacity: 0.8; }
 .social-icon { width: 40px; height: 40px; display: inline-block; border-radius: 4px; cursor: pointer; transition: transform 0.2s; background-size: contain; background-repeat: no-repeat; background-position: center; }
 .social-icon:hover { transform: scale(1.1); }
-.instagram-icon { background-image: url('assets/icon-instragram.png'); }
-.linkedin-icon { background-image: url('assets/icon-linkedin.png'); }
+.instagram-icon { background-image: url('assets/icon-instragram small.png'); }
+.linkedin-icon { background-image: url('assets/icon-linkedin small.png'); }
 .main-content { padding: 60px 0; background-color: #FFEFCA; min-height: calc(100vh - 300px); }
 .about-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
 .bio-image { width: 100%; height: auto; border-radius: 4px; }
