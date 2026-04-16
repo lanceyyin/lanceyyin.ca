@@ -46,23 +46,14 @@ body { font-family: 'Host Grotesk', sans-serif; background-color: #FFEFCA; color
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .about-section { grid-template-columns: 1fr; }
-    .nav { gap: 20px; }
-    .nav a:not(.social-icon) { font-size: 14px; }
-    .portfolio-item { grid-template-columns: 1fr; }
-    .gallery-grid { grid-template-columns: 1fr; }
-}
-
 /* Illustration Page */
 .section-title { font-family: 'Do Hyeon', sans-serif; font-size: 24px; color: #333; text-align: center; margin-bottom: 30px; }
 .illus-grid { margin-bottom: 60px; }
 .narrative-grid { display: flex; gap: 20px; justify-content: center; }
 .narrative-thumb { width: 45%; height: 300px; object-fit: cover; border-radius: 4px; cursor: pointer; transition: opacity 0.2s; }
 .narrative-thumb:hover { opacity: 0.85; }
-.personal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; align-items: start; }
-.personal-img { width: 100%; height: auto; border-radius: 4px; cursor: pointer; transition: opacity 0.2s; display: block; }
+.personal-grid { columns: 3; column-gap: 10px; }
+.personal-img { width: 100%; height: auto; border-radius: 4px; cursor: pointer; transition: opacity 0.2s; display: block; margin-bottom: 10px; break-inside: avoid; }
 .personal-img:hover { opacity: 0.85; }
 
 /* Lightbox */
@@ -71,8 +62,5 @@ body { font-family: 'Host Grotesk', sans-serif; background-color: #FFEFCA; color
 .lightbox-close { position: absolute; top: 20px; left: 20px; font-family: 'Do Hyeon', sans-serif; font-size: 20px; color: white; background: none; border: none; cursor: pointer; z-index: 2001; }
 #lightbox-img { max-width: 1200px; width: 100%; height: auto; border-radius: 4px; }
 
-@media (max-width: 768px) {
-    .narrative-grid { flex-direction: column; align-items: center; }
-    .narrative-thumb { width: 100%; }
-    .personal-grid { grid-template-columns: repeat(2, 1fr); }
-}
+/* Responsive */
+@media (max-width: 768px) { .about-section { grid-template-columns: 1fr; } .nav { gap: 20px; } .nav a:not(.social-icon) { font-size: 14px; } .portfolio-item { grid-template-columns: 1fr; } .gallery-grid { grid-template-columns: 1fr; } .narrative-grid { flex-direction: column; align-items: center; } .narrative-thumb { width: 100%; height: 250px; } .personal-grid { columns: 2; } }
