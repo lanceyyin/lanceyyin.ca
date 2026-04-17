@@ -54,7 +54,7 @@ body { font-family: 'Host Grotesk', sans-serif; background-color: #FFEFCA; color
 .narrative-thumb { width: 45%; height: 300px; object-fit: cover; border-radius: 4px; cursor: pointer; transition: opacity 0.2s; }
 .narrative-thumb:hover { opacity: 0.85; }
 .personal-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-.personal-grid .personal-img { flex: 1 1 ; width: auto; height: 280px; object-fit: contain; border-radius: 4px; cursor: pointer; transition: opacity 0.2s; display: block; }
+.personal-grid .personal-img { width: auto; height: 280px; object-fit: contain; border-radius: 4px; cursor: pointer; transition: opacity 0.2s; display: block; }
 .personal-grid .personal-img:hover { opacity: 0.85; }
 
 /* Lightbox */
