@@ -66,6 +66,8 @@ body { font-family: 'Host Grotesk', sans-serif; background-color: #FFEFCA; color
 #lightbox-img.zoomed { cursor: grab; }
 #lightbox-img.dragging { cursor: grabbing; transition: none; }
 
+.hamburger { display: none; }
+.mobile-menu { display: none; }
 /* Responsive */
 @media (max-width: 768px) {
     /* Existing mobile fixes */
@@ -129,7 +131,7 @@ body { font-family: 'Host Grotesk', sans-serif; background-color: #FFEFCA; color
         padding: 0;
     }
     .mobile-menu.open {
-        max-height: 200px;
+        max-height: 50vh;
         padding: 16px 0 20px;
     }
     .mobile-menu-links {
