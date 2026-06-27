@@ -10,16 +10,31 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="container">
-            <img src="assets/icon-logo text long.png" alt="Lancey Yin" class="logo">
-            <nav class="nav">
+    <div class="container">
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <a href="index.html"><img src="assets/icon-logo text long.png" alt="Lancey Yin" class="logo"></a>
+        <nav class="nav">
+            <a href="illustration.html">Illustration</a>
+            <a href="design.html">Design</a>
+            <a href="https://www.instagram.com/giraffemandraws/" class="social-icon instagram-icon"></a>
+            <a href="https://www.linkedin.com/in/lancey-yin/" class="social-icon linkedin-icon"></a>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-links">
                 <a href="illustration.html">Illustration</a>
                 <a href="design.html">Design</a>
-                <a href="https://www.instagram.com/giraffemandraws/" class="social-icon instagram-icon"></a>
-                <a href="https://www.linkedin.com/in/lancey-yin/" class="social-icon linkedin-icon"></a>
-            </nav>
+                <div class="mobile-menu-icons">
+                    <a href="https://www.instagram.com/giraffemandraws/" class="social-icon instagram-icon"></a>
+                    <a href="https://www.linkedin.com/in/lancey-yin/" class="social-icon linkedin-icon"></a>
+                </div>
+            </div>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- Main Content -->
     <main class="main-content">
@@ -45,5 +60,19 @@
             </div>
         </div>
     </footer>
+    <script>
+    function toggleMenu() {
+        document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    // Close menu if user clicks outside of it
+    document.addEventListener('click', function(e) {
+        const menu = document.getElementById('mobileMenu');
+        const hamburger = document.querySelector('.hamburger');
+        if (menu && hamburger && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+            menu.classList.remove('open');
+        }
+    });
+</script>
 </body>
 </html>
