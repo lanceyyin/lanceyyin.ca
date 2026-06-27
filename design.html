@@ -43,6 +43,15 @@
                 </div>
             </div>
 
+            <!-- Better Transit Project -->
+            <div class="portfolio-item" onclick="openModal('transit')">
+                <img src="Design projects/04 Better Transit/mockup.jpg" alt="Better Transit" class="portfolio-image">
+                <div class="portfolio-text">
+                    <h2>Better Transit Posters</h2>
+                    <p>Your project description goes here.</p>
+                </div>
+            </div>
+            
             <!-- Basilisk Wine Project -->
             <div class="portfolio-item" onclick="openModal('basilisk')">
                 <img src="Design projects/03 Basilisk/Basilisk-Render.jpg" alt="Basilisk Wine" class="portfolio-image">
@@ -110,6 +119,27 @@
         </div>
     </div>
 
+<!-- Better Transit Modal -->
+<div id="transitModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button class="close-btn" onclick="closeModal('transit')">✕ Close</button>
+            <h2 class="modal-title">Better Transit Posters</h2>
+        </div>
+        <div class="modal-description">
+            <p>Your project description goes here.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="Design projects/04 Better Transit/01_Save Your Money.jpg"  alt="Save Your Money"  onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="Design projects/04 Better Transit/02_Accessibility.jpg"    alt="Accessibility"    onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="Design projects/04 Better Transit/03_Traffic.jpg"          alt="Traffic"          onclick="openLightbox(this)"></div>
+        </div>
+        <div class="modal-footer">
+            <button class="close-btn-footer" onclick="closeModal('transit')">✕ Close</button>
+        </div>
+    </div>
+</div>
+    
     <!-- Basilisk Wine Modal -->
     <div id="basiliskModal" class="modal">
         <div class="modal-content">
@@ -156,6 +186,7 @@
             const modals = {
                 'zoo': 'zooModal',
                 'critter': 'critterModal',
+                'transit': 'transitModel',
                 'basilisk': 'basiliskModal'
             };
             const modal = document.getElementById(modals[project]);
@@ -167,6 +198,7 @@
             const modals = {
                 'zoo': 'zooModal',
                 'critter': 'critterModal',
+                'transit': 'transitModal',
                 'basilisk': 'basiliskModal'
             };
             const modal = document.getElementById(modals[project]);
