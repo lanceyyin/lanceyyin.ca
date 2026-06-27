@@ -132,13 +132,17 @@ body { font-family: 'Host Grotesk', sans-serif; background-color: #FFEFCA; color
     }
     .mobile-menu.open {
         max-height: 50vh;
+        min-height: 50vh;
         padding: 16px 0 20px;
     }
     .mobile-menu-links {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 14px;
+        min-height: 50vh;
+    }
     }
     .mobile-menu-links a:not(.social-icon) {
         font-family: 'Do Hyeon', sans-serif;
