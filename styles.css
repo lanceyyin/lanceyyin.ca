@@ -144,7 +144,7 @@ html { background-color: #4C630A; height: 100%; }
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 25px;
+        gap: 40px;
         min-height: 50vh;
     }
     .mobile-menu-links a:not(.social-icon) {
