@@ -144,7 +144,6 @@ html { background-color: #4C630A; height: 100%; }
         gap: 14px;
         min-height: 50vh;
     }
-    }
     .mobile-menu-links a:not(.social-icon) {
         font-family: 'Do Hyeon', sans-serif;
         font-size: 18px;
