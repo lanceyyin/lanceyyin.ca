@@ -36,6 +36,7 @@
             </div>
         </div>
     </div>
+    <div class="menu-overlay" id="menuOverlay"></div>
 </header>
 
     <!-- Main Content -->
@@ -155,17 +156,18 @@
     </script>
     <script>
     function toggleMenu() {
-        document.getElementById('mobileMenu').classList.toggle('open');
-    }
+    document.getElementById('mobileMenu').classList.toggle('open');
+    document.getElementById('menuOverlay').classList.toggle('show');
+}
 
-    // Close menu if user clicks outside of it
-    document.addEventListener('click', function(e) {
-        const menu = document.getElementById('mobileMenu');
-        const hamburger = document.querySelector('.hamburger');
-        if (menu && hamburger && !menu.contains(e.target) && !hamburger.contains(e.target)) {
-            menu.classList.remove('open');
-        }
-    });
+document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    const hamburger = document.querySelector('.hamburger');
+    if (menu && hamburger && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+        menu.classList.remove('open');
+        document.getElementById('menuOverlay').classList.remove('show');
+    }
+});
 </script>
 </body>
 </html>
