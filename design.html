@@ -68,6 +68,15 @@
                     <p>A series of posters each highlighting a different quality of life aspect that a good public transit system could benefit (Affordability, accessibility, and traffic congestion). I drew upon my frustrations with the terribly neglected and underfunded transit system of Toronto, and in North America in general, when creating this project.</p>
                 </div>
             </div>
+
+<!-- Sheridan Figure Skating Club Project -->
+<div class="portfolio-item" onclick="openModal('skating')">
+    <img src="Design projects/05 Sheridan Figure Skating Club/03 - Thumbnail.jpg" alt="Sheridan Figure Skating Club Posters" class="portfolio-image">
+    <div class="portfolio-text">
+        <h2>Sheridan Figure Skating Club Posters</h2>
+        <p>Your project description goes here.</p>
+    </div>
+</div>
             
             <!-- Basilisk Wine Project -->
             <div class="portfolio-item" onclick="openModal('basilisk')">
@@ -156,6 +165,31 @@
         </div>
     </div>
 </div>
+
+<!-- Sheridan Figure Skating Club Modal -->
+<div id="skatingModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button class="close-btn" onclick="closeModal('skating')">✕ Close</button>
+            <h2 class="modal-title">Sheridan Figure Skating Club Posters</h2>
+        </div>
+        <div class="modal-description">
+            <p>Your project description goes here.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="Design projects/05 Sheridan Figure Skating Club/01 - logo.png"            alt="Logo"                onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="Design projects/05 Sheridan Figure Skating Club/02 - logo - notext.png"   alt="Logo No Text"        onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="Design projects/05 Sheridan Figure Skating Club/Movie night - poster.jpg" alt="Movie Night Poster"   onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="Design projects/05 Sheridan Figure Skating Club/Movie night - web.jpg"    alt="Movie Night Web"      onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="Design projects/05 Sheridan Figure Skating Club/Rollerskating - tbd.jpg"  alt="Rollerskating TBD"   onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="Design projects/05 Sheridan Figure Skating Club/Rollerskating - poster.jpg" alt="Rollerskating Poster" onclick="openLightbox(this)"></div>
+            <div class="gallery-item"><img src="Design projects/05 Sheridan Figure Skating Club/Rollerskating - Web.jpg"  alt="Rollerskating Web"    onclick="openLightbox(this)"></div>
+        </div>
+        <div class="modal-footer">
+            <button class="close-btn-footer" onclick="closeModal('skating')">✕ Close</button>
+        </div>
+    </div>
+</div>
     
     <!-- Basilisk Wine Modal -->
     <div id="basiliskModal" class="modal">
@@ -204,6 +238,7 @@
                 'zoo': 'zooModal',
                 'critter': 'critterModal',
                 'transit': 'transitModal',
+                'skating': 'skatingModal',
                 'basilisk': 'basiliskModal'
             };
             const modal = document.getElementById(modals[project]);
@@ -216,6 +251,7 @@
                 'zoo': 'zooModal',
                 'critter': 'critterModal',
                 'transit': 'transitModal',
+                'skating': 'skatingModal',
                 'basilisk': 'basiliskModal'
             };
             const modal = document.getElementById(modals[project]);
